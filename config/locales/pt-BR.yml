@@ -1,0 +1,63 @@
+pt-BR:
+  activerecord:
+    attributes:
+      attribute_commons: &commons
+        name: "Nome"
+        email: "Email"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+      user:
+        <<: *commons
+  registrations:
+    update: "Atualizar"
+  time:
+    distance: "há %{time}"
+  sessions:
+    sign_in: "Login"
+    sign_out: "Sair"
+    sign_up: "Cadastrar-se"
+    profile: "Meu Perfil"
+    register: "Cadastrar"
+    edit_profile: "Editar perfil"
+  flash:
+    actions:
+      update:
+        m: "%{resource_name} atualizado com sucesso!"
+        f: "%{resource_name} atualizada com sucesso!"
+      create:
+        m: "%{resource_name} criado com sucesso!"
+        f: "%{resource_name} criada com sucesso!"
+      destroy:
+        m: "%{resource_name} removido com sucesso!"
+        f: "%{resource_name} removida com sucesso!"
+      errors: "Alguns erros foram encontrados, por favor verifique:"
+  breadcrumbs:
+    home: "Página inicial"
+    configs: "Configurações"
+    users:
+      edit_profile: "Editar perfil"
+  models:
+    user:
+      one: "Usuário"
+      other: "Usuários"
+  helpers:
+    no_results: 'Nenhum resultado encontrado.'
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: ''
+          one: 'Total de <b>1</b> %{entry_name}'
+          other: 'Total de <b> %{count}</b> %{entry_name}'
+      more_pages:
+        display_entries: 'Mostrando %{first}&nbsp;-&nbsp;%{last} de %{total} %{entry_name}'
+  buttons:
+    save: 'Salvar'
+  prompt:
+    confirm: "Você tem certeza?"
+  views:
+    pagination:
+      first: "&laquo;"
+      last: "&raquo;"
+      previous: "&lsaquo; Anterior"
+      next: "Seguinte &rsaquo;"
+      truncate: "&hellip;"

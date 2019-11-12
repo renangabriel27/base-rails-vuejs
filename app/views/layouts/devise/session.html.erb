@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>RailsApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'session', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'session',  'data-turbolinks-track': 'reload' %>
+
+    <%= favicon_link_tag %>
+  </head>
+
+  <body id="<%= controller_name %>-<%= action_name %>" >
+
+    <div id="app" class="page">
+      <div class="page-single">
+        <div class="container-fluid">
+
+          <div class="row">
+            <div class="col col-login mx-auto">
+              <div class="text-center mb-6">
+                <%= image_tag("logo.png", alt: "logo-video-app", class: 'header-brand-img') %>
+              </div>
+
+              <div class="text-center mb-6">
+              </div>
+
+              <div class="card card-body p-6">
+                <%= render 'shared/flash_messages'%>
+
+                <div class="card-title">
+                  <h4 class="text-center">
+                    <%= yield :title %>
+                  </h4>
+                </div>
+
+                <%= yield %>
+
+              </div> <!-- .card -->
+            </div>
+          </div> <!-- .row -->
+        </div> <!-- .container -->
+
+      </div>
+    </div>
+  </body>
+</html>

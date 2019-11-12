@@ -1,0 +1,33 @@
+<div class="container-fluid fixed-top header py-4">
+  <div class="d-flex">
+    <%= link_to users_root_path, class: 'header-brand ml-5' do %>
+      <% image_tag 'logo.png', class: 'header-brand-img', alt: 'logo-videos-app' %>
+    <% end %>
+
+    <div class="d-flex order-lg-2 ml-auto">
+      <div class="dropdown">
+        <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
+          <span class="avatar" style="background-image: url('<%= current_user.profile_image.url(:thumb) %>')"></span>
+
+          <span class="ml-2 d-none d-lg-block">
+            <span class="text-default"><%= current_user.name %></span>
+            <small class="text-muted d-block mt-1"><%= current_user.email %></small>
+          </span>
+        </a>
+
+        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+          <%= link_to edit_user_registration_path, class: 'dropdown-item' do %>
+            <i class="dropdown-icon fas fa-user-edit"></i> <%= t('sessions.edit_profile') %>
+          <% end %>
+          <%= link_to destroy_user_session_path, method: :delete, class: 'dropdown-item' do %>
+            <i class="dropdown-icon fas fa-sign-out-alt"></i> <%= t('sessions.sign_out') %>
+          <% end %>
+        </div>
+      </div>
+
+      <a href="#" class="header-toggler d-lg-none d-md-none ml-3" data-toggle="collapse" data-target="#headerMenuCollapse" aria-expanded="true">
+        <span class="header-toggler-icon"></span>
+      </a>
+    </div>
+  </div>
+</div>

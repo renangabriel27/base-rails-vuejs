@@ -1,0 +1,16 @@
+<div class="col-sm-12 col-md-3 col-lg-2 collapse d-md-flex align-items-start" id="headerMenuCollapse">
+  <div class="list-group list-group-transparent mb-2 sidebar">
+    <span class="sidebar-heading pl-0 pt-2 pb-2">
+      <%= icon('fas', 'compass', class: 'mr-2') %>
+      <%= t('breadcrumbs.configs') %>
+    </span>
+
+    <%= active_link_to(edit_user_registration_path, class: 'list-group-item list-group-item-action') do %>
+      <span class="icon mr-2">
+        <%= icon('fas', 'user-edit') %>
+      </span>
+      <%= t('breadcrumbs.users.edit_profile') %>
+    <% end %>
+  </div>
+</div>
+
